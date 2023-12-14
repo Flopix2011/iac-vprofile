@@ -35,4 +35,18 @@ module "eks" {
       desired_size = 1
     }
   }
+   block_device_mappings = {
+        xvda = {
+          device_name = "/dev/xvda"
+          ebs = {
+            volume_size           = 75
+            volume_type           = "gp3"
+            iops                  = 3000
+            throughput            = 150
+            encrypted             = true
+            kms_key_id            = module.ebs_kms_key.key_arn
+            delete_on_termination = true
+          }
+        }
+      }
 }
