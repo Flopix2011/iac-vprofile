@@ -34,8 +34,7 @@ module "eks" {
       max_size     = 2
       desired_size = 1
     }
-  }
-   block_device_mappings = {
+     block_device_mappings = {
         xvda = {
           device_name = "/dev/xvda"
           ebs = {
@@ -49,4 +48,5 @@ module "eks" {
           }
         }
       }
+  }
 }
