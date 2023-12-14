@@ -24,13 +24,13 @@ module "eks" {
       max_size     = 3
       desired_size = 2
       #encrypted = true
-      block_device_mappings = [{
-        device_name           = "/dev/xvda"
-        volume_size           = 20
-        volume_type           = "gp2"
-        encrypted             = true
-        delete_on_termination = true
-     }]
+     # block_device_mappings = [{
+      #  device_name           = "/dev/xvda"
+       # volume_size           = 20
+        #volume_type           = "gp2"
+        #encrypted             = true
+        #delete_on_termination = true
+     #}]
     }
 
     two = {
@@ -42,13 +42,13 @@ module "eks" {
       max_size     = 2
       desired_size = 1
       #encrypted    = true
-      block_device_mappings = [{
-        device_name           = "/dev/xvda"
-        volume_size           = 20
-        volume_type           = "gp2"
-        encrypted             = true
-        delete_on_termination = true
-     }]
+      #block_device_mappings = [{
+       # device_name           = "/dev/xvda"
+        #volume_size           = 20
+        #volume_type           = "gp2"
+        #encrypted             = true
+        #delete_on_termination = true
+     #}]
     }
   }
 }
